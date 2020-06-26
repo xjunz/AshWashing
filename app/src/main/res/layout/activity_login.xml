@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/login_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/spacing_large"
+        android:layout_marginEnd="@dimen/spacing_large"
+        android:background="@drawable/bg_card"
+        android:clipChildren="false"
+        android:elevation="@dimen/z_dialog"
+        android:paddingStart="@dimen/spacing_normal"
+        android:paddingTop="@dimen/fab_normal_radius"
+        android:paddingEnd="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_unit"
+        android:transitionName="@string/tn_button">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:text="@string/log_in_to"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiy_qz_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="@dimen/spacing_unit"
+
+                app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_qz_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiy_qz_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tiy_qz_user_name"
+                android:layout_marginTop="@dimen/spacing_unit"
+                app:layout_constraintTop_toBottomOf="@+id/tiy_qz_user_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_log_in_or_subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tiy_qz_password"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/spacing_unit"
+                android:layout_marginBottom="@dimen/spacing_unit"
+                android:onClick="logIn"
+                android:text="@string/log_in"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiy_qz_password" />
+
+            <Button
+                android:id="@+id/btn_register"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tiy_qz_password"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/spacing_unit"
+                android:layout_marginBottom="@dimen/spacing_unit"
+                android:onClick="gotoRegister"
+                android:text="@string/register"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_log_in_or_subscribe"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_log_in_or_subscribe" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_login"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginBottom="64dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_above="@+id/login_panel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fab_normal_radius_minus"
+        android:background="@drawable/bg_circle"
+        android:contentDescription="@string/avatar"
+        android:elevation="@dimen/z_dialog"
+        android:src="@drawable/ic_account_circle_64dp"
+        android:transitionName="@string/tn_image_view" />
+
+</RelativeLayout>

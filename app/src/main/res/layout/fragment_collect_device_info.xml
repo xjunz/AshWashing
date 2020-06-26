@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/collect_device_info_banner_height"
+        android:background="?colorPrimary"
+        android:elevation="@dimen/z_card"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/art_meter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/alert"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_banner" />
+
+    <TextView
+        android:id="@+id/tv_order_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:text="@string/caption_collect_device_info"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/step"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_info" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:text="@string/caption_collect_device_info_steps"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/btn_action"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:text="@string/collect_device_info"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

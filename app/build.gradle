@@ -1,0 +1,135 @@
+apply plugin: 'com.android.application'
+apply plugin: 'AndResGuard'
+apply plugin: 'stringfog'
+/*
+*注意：
+* AS直接编译运行的APP不包含签名文件（SF、MF）,会导致Native层获取到空签名而导致空指针
+* 混淆文件不能乱动，可能会导致莫名其妙的情况
+*/
+stringfog {
+    // 这是加解密key，可以自由定义。
+    key 'Wc1Xsaw3Bysh8s73b_dwu'
+    // 开关
+    enable true
+    // 加解密库的实现类路径，需和上面配置的加解密算法库一致。
+    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+    // 指定需加密的代码包路径，可配置多个，未指定将默认全部加密。
+    //fogPackages = ['com.xxx.xxx']
+}
+android {
+    //用Java8进行编译
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        ashwashing {
+            storeFile file('C:\\Users\\zxj\\Desktop\\AshWashing.jks')
+            storePassword 'zy100000'
+            keyAlias = 'AshWashing'
+            keyPassword 'zy100000'
+        }
+    }
+    buildToolsVersion = '29.0.3'
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.ashwashing.pro"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 3
+        versionName "2.2.0"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+                cFlags "-fvisibility=hidden"
+                cppFlags "-fvisibility=hidden"
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.ashwashing
+            debuggable = false
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.ashwashing
+            multiDexEnabled true
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+}
+
+
+andResGuard {
+    // mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    // 打开这个开关，会keep住所有资源的原始路径，只混淆资源的名字
+    keepRoot = false
+    // 打开这个开关会合并所有哈希值相同的资源，但请不要过度依赖这个功能去除去冗余资源
+    mergeDuplicatedRes = true
+    whiteList = [
+            // for your icon
+            "R.mipmap.*",
+            // for fabric
+            "R.string.com.crashlytics.*",
+            // for google-services
+            "R.string.google_app_id",
+            "R.string.gcm_defaultSenderId",
+            "R.string.default_web_client_id",
+            "R.string.ga_trackingId",
+            "R.string.firebase_database_url",
+            "R.string.google_api_key",
+            "R.string.google_crash_reporting_api_key"
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.18'
+        //path = "/usr/local/bin/7za"
+    }
+
+    //可选： 如果不设置则会默认覆盖assemble输出的apk
+    // finalApkBackupPath = "${project.rootDir}/final.apk"
+    // 可选: 指定v1签名时生成jar文件的摘要算法
+    //默认值为“SHA-1”
+    // digestalg = "SHA-256"
+}
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-beta01'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha03'
+    implementation 'com.github.AppIntro:AppIntro:5.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //implementation 'com.github.megatronking.stringfog:interface:1.1.0'
+    implementation 'com.github.megatronking.stringfog:xor:1.1.0'
+    implementation files('libs/commons-codec-1.12.jar')
+}

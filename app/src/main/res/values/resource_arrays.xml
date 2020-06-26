@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="info_icons">
+        <item>@drawable/ic_date_range_24dp</item>
+        <item>@drawable/ic_water_device_24dp</item>
+        <item>@drawable/ic_account_circle_24dp</item>
+        <item>@drawable/ic_info_outline_24dp</item>
+        <item>@drawable/ic_timer_24dp</item>
+        <item>@drawable/ic_expense_24dp</item>
+    </integer-array>
+    <integer-array name="menu_icons">
+        <item>@drawable/ic_history_24dp</item>
+        <item>@drawable/ic_settings_24dp</item>
+        <item>@drawable/ic_feedback_24dp</item>
+        <item>@drawable/ic_help_24dp</item>
+        <item>@drawable/ic_info_outline_24dp</item>
+    </integer-array>
+    <integer-array name="user_info_titles">
+        <item>@string/account_name</item>
+        <item>@string/phone_number</item>
+        <item>@string/academy</item>
+        <item>@string/subscription_info</item>
+        <item>@string/register_time</item>
+    </integer-array>
+    <integer-array name="user_info_icons">
+        <item>@drawable/ic_account_circle_24dp</item>
+        <item>@drawable/ic_phone_24dp</item>
+        <item>@drawable/ic_academy_24dp</item>
+        <item>@drawable/ic_info_outline_24dp</item>
+        <item>@drawable/ic_clock_24dp</item>
+    </integer-array>
+</resources>

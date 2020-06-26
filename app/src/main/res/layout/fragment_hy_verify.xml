@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_normal">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_hy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:hint="@string/enter_phone_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
+            android:maxLength="11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/enter_vrf_code">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:letterSpacing=".1"
+                android:maxLength="6" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_obtain_verify_code"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/obtain_verify_code" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_unit"
+        android:text="@string/caption_verify_code"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+</LinearLayout>

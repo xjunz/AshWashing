@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">?colorPrimary</item>
+        <item name="colorButtonNormal">?colorAccent</item>
+        <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert.Material
+        </item>
+        <item name="android:ambientShadowAlpha">.039</item>
+        <item name="android:spotShadowAlpha">.089</item>
+    </style>
+
+
+    <style name="AppTheme.Intro">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    gi
+
+    <style name="AppTheme.Translucent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Translucent.Dialog">
+        <item name="android:windowBackground">@color/mask</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Translucent.Dialog.Login">
+        <item name="android:windowEnterTransition">@transition/login_enter</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/login_shared_enter
+        </item>
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+    </style>
+
+    <style name="AppTheme.Translucent.Register">
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/register_shared_enter
+        </item>
+        <item name="android:windowEnterTransition">@transition/register_enter</item>
+        <item name="android:windowSoftInputMode">adjustPan|stateHidden</item>
+    </style>
+
+
+    <style name="AppTheme.Translucent.Shower">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowEnterTransition">@transition/shower_enter</item>
+        <item name="android:windowReturnTransition">@transition/shower_return</item>
+    </style>
+
+    <style name="AppTheme.Translucent.History">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@color/mask</item>
+        <item name="android:windowEnterTransition">@transition/history_enter</item>
+    </style>
+
+    <style name="AppTheme.Translucent.Dialog.UserInfo">
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:windowEnterTransition">@transition/user_info_enter</item>
+        <item name="android:windowReturnTransition">@transition/user_info_return</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/user_info_shared_enter
+        </item>
+    </style>
+
+    <style name="AppTheme.Translucent.Subscribe">
+        <item name="android:windowBackground">@color/mask</item>
+        <item name="android:windowElevation">@dimen/z_dialog</item>
+        <item name="colorPrimary">@color/subscribePrimary</item>
+        <item name="android:statusBarColor">@color/subscribePrimaryDark</item>
+        <item name="android:navigationBarColor">@color/subscribePrimary</item>
+        <item name="colorAccent">@color/subscribeAccent</item>
+        <item name="colorButtonNormal">@color/subscribePrimary</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/subscribe_shared_enter
+        </item>
+        <item name="android:textColorPrimary">@color/subscribePrimaryDark</item>
+        <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert.Material.Order
+        </item>
+    </style>
+
+
+    <!-- normal-sized button style (for normal usage) -->
+    <style name="Widget.AppCompat.Button.Normal">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/bg_btn_normal</item>
+    </style>
+
+    <!-- flat button style -->
+    <style name="Widget.AppCompat.Button.Normal.Flat">
+        <item name="android:stateListAnimator">@animator/flat_raise_button</item>
+    </style>
+
+    <!-- flat small-sized button style (such as positive dialog button) -->
+    <style name="Widget.AppCompat.Button.Normal.Flat.Small">
+        <item name="android:background">@drawable/bg_btn_small</item>
+    </style>
+
+    <!-- borderless small-sized button style (such as negative dialog button) -->
+    <style name="Widget.AppCompat.Button.Borderless.Colored.Small">
+        <item name="android:background">@drawable/bg_btn_borderless_small</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+    </style>
+
+    <!-- borderless button style -->
+    <style name="Widget.AppCompat.Button.Borderless.Colored.Normal">
+        <item name="android:background">@drawable/bg_btn_borderless_normal</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.Dialog.Alert.Material">
+        <item name="colorButtonNormal">?colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.AppCompat.Button.Normal.Flat.Small
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Widget.AppCompat.Button.Borderless.Colored
+        </item>
+        <item name="buttonBarNeutralButtonStyle">
+            @style/Widget.AppCompat.Button.Borderless.Colored.Small
+        </item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.25</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:windowBackground">@drawable/bg_material_dialog</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.Dialog.Alert.Material.Order">
+        <item name="colorButtonNormal">@color/subscribePrimary</item>
+        <item name="colorAccent">@color/subscribeAccent</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.Dialog.Alert.Material.Fragment">
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowBackground">@drawable/bg_card</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.Dialog.Alert.Material.Fragment.Order">
+        <item name="android:windowSoftInputMode">adjustUnspecified</item>
+        <item name="colorPrimary">@color/subscribePrimary</item>
+        <item name="colorButtonNormal">?colorPrimary</item>
+        <item name="colorAccent">@color/subscribeAccent</item>
+        <item name="android:windowBackground">@drawable/bg_card</item>
+    </style>
+
+
+    <style name="DialogAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="Widget.AppCompat.ImageButton.Rationale">
+        <item name="android:src">@drawable/ic_help_outline_black_20dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:tint">?android:textColorSecondaryNoDisable</item>
+    </style>
+
+
+    <integer name="shortMargin">220</integer>
+    <integer name="shortHalf">260
+    </integer>
+    <integer name="shortFull">340</integer>
+
+</resources>

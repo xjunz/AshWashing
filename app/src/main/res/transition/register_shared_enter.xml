@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:duration="@integer/shortFull">
+    <transition
+        class="com.ashwashing.pro.ui.transition.RectangularSurfaceTransform"
+        app:startColor="@color/colorCardBackground">
+        <targets>
+            <target android:targetId="@+id/register_panel" />
+        </targets>
+    </transition>
+    <transition class="com.ashwashing.pro.ui.transition.Elevate">
+        <targets>
+            <target android:targetId="@+id/register_panel" />
+        </targets>
+    </transition>
+</transitionSet>
+

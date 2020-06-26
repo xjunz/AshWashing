@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="dp_1">0.9343dp</dimen>
+	<dimen name="dp_2">1.8686dp</dimen>
+	<dimen name="dp_4">3.7372dp</dimen>
+	<dimen name="dp_12">11.2117dp</dimen>
+	<dimen name="spacing_unit">7.4745dp</dimen>
+	<dimen name="spacing_normal">14.9489dp</dimen>
+	<dimen name="spacing_large">29.8978dp</dimen>
+	<dimen name="dp_64">59.7956dp</dimen>
+	<dimen name="dp_24">22.4234dp</dimen>
+	<dimen name="dp_48">44.8467dp</dimen>
+	<dimen name="fab_small">37.3723dp</dimen>
+	<dimen name="fab_normal">52.3212dp</dimen>
+	<dimen name="avatar_width">44.8467dp</dimen>
+	<dimen name="fab_normal_radius">26.1606dp</dimen>
+	<dimen name="fab_normal_radius_minus">-26.1606dp</dimen>
+	<dimen name="z_toolbar">5.6058dp</dimen>
+	<dimen name="z_card">1.8686dp</dimen>
+	<dimen name="z_dialog">9.3431dp</dimen>
+	<dimen name="z_fab">3.7372dp</dimen>
+	<dimen name="corner_card">1.8686dp</dimen>
+	<dimen name="corner_dialog">3.7372dp</dimen>
+	<dimen name="corner_button">1.8686dp</dimen>
+	<dimen name="drag_dismiss_distance">197.1387dp</dimen>
+	<dimen name="shower_banner_height">168.1752dp</dimen>
+	<dimen name="shower_card_margin_top">153.2263dp</dimen>
+	<dimen name="ripple_spacing">18.6861dp</dimen>
+	<dimen name="username_max_width">186.8613dp</dimen>
+	<dimen name="z_bottom_bar">5.6058dp</dimen>
+	<dimen name="captcha_width">93.4307dp</dimen>
+	<dimen name="captcha_height">37.3723dp</dimen>
+	<dimen name="collect_device_info_banner_height">130.8029dp</dimen>
+	<dimen name="payment_banner_height">130.8029dp</dimen>
+	<dimen name="no_history_place_holder_width">134.5401dp</dimen>
+	<dimen name="dp_6">5.6058dp</dimen>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RippleView">
+        <attr name="rippleSpacing" format="dimension|reference" />
+        <attr name="rippleCount" format="integer|reference" />
+        <attr name="rippleColor" format="color|reference" />
+        <attr name="rippleAutoRunning" format="boolean" />
+        <attr name="rippleTarget" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RectTransform">
+        <attr name="startColor" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="ElasticDragDismissFrameLayout">
+        <attr name="dragDismissDistance" format="dimension" />
+        <attr name="dragDismissFraction" format="float" />
+        <attr name="dragDismissScale" format="float" />
+        <attr name="dragElasticity" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CouponRelativeLayout">
+        <attr name="circleRadius" format="dimension|reference" />
+        <attr name="circleGap" format="dimension|reference" />
+        <attr name="circleFillColor" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="ForegroundImageView">
+        <attr name="android:foreground" />
+    </declare-styleable>
+
+</resources>
+ 

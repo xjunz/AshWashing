@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+android:insetLeft="@dimen/dp_12"
+android:insetTop="@dimen/spacing_unit"
+android:insetRight="@dimen/dp_12"
+android:insetBottom="@dimen/spacing_unit">
+<ripple android:color="?colorControlHighlight">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/corner_button" />
+            <solid android:color="?colorButtonNormal" />
+        </shape>
+    </item>
+</ripple>
+</inset>

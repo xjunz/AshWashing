@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="@dimen/spacing_large"
+        android:layout_height="@dimen/spacing_large"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:backgroundTint="?colorAccent"
+        android:background="@drawable/bg_circle"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_unit"
+        android:layout_marginTop="@dimen/spacing_unit"
+        android:layout_marginEnd="@dimen/spacing_unit"
+        android:layout_marginBottom="@dimen/spacing_unit"
+        android:background="@drawable/bg_card"
+        android:elevation="@dimen/z_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_num"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_bill_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:elevation="@dimen/z_card"
+        android:text="2019-2-20"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_unit"
+        android:elevation="@dimen/z_card"
+        android:letterSpacing=".05"
+        app:layout_constraintStart_toStartOf="@+id/tv_bill_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bill_id" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_unit"
+        android:layout_marginBottom="@dimen/spacing_normal"
+        android:elevation="@dimen/z_card"
+        android:letterSpacing=".05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_bill_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_device" />
+
+    <TextView
+        android:id="@+id/tv_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_unit"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:layout_marginBottom="@dimen/spacing_unit"
+        android:elevation="@dimen/z_card"
+        android:text="￥2.00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider_top"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/spacing_unit"
+        android:layout_marginBottom="2dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/tv_num"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/tv_num"
+        app:layout_constraintTop_toTopOf="parent" />
+
+     <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/spacing_unit"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/tv_num"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

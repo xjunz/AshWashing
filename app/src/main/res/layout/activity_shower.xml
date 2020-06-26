@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionGroup="false"
+    android:transitionName="@string/tn_fab">
+
+    <View
+        android:id="@+id/fake_background"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?android:colorBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_banner" />
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shower_banner_height"
+        android:layout_marginBottom="@dimen/spacing_unit"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/z_card"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/art_shower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_device_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/shower_card_margin_top"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:background="@drawable/bg_card"
+        android:clipToPadding="false"
+        android:elevation="@dimen/z_card"
+        android:paddingTop="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_normal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_info" />
+
+
+    <ProgressBar
+        android:id="@+id/pb_prepare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:minWidth="80dp"
+        android:minHeight="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_action"
+        app:layout_constraintEnd_toEndOf="@+id/ib_action"
+        app:layout_constraintStart_toStartOf="@+id/ib_action"
+        app:layout_constraintTop_toTopOf="@+id/ib_action" />
+
+    <ImageButton
+        android:id="@+id/ib_action"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:contentDescription="@string/cd_start"
+        android:enabled="false"
+        android:onClick="progressShowerState"
+        android:scaleType="fitCenter"
+        android:tint="@color/image_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_device_info" />
+
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_dash_framed"
+        android:elevation="3dp"
+        android:letterSpacing=".2 "
+        android:paddingStart="@dimen/spacing_normal"
+        android:paddingTop="@dimen/spacing_unit"
+        android:paddingEnd="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_unit"
+        android:rotation="-45"
+        android:text="@string/shower_completed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rv_device_info"
+        app:layout_constraintEnd_toEndOf="@+id/iv_banner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:letterSpacing=".05"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/ib_action"
+        app:layout_constraintStart_toStartOf="@+id/ib_action"
+        app:layout_constraintTop_toBottomOf="@+id/ib_action" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

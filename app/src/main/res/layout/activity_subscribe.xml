@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ashwashing.pro.customview.ElasticDragDismissFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/elastic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:dragDismissDistance="@dimen/drag_dismiss_distance"
+    app:dragDismissScale=".95">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:colorBackground"
+        android:orientation="vertical"
+        android:transitionGroup="true"
+        android:transitionName="@string/tn_button">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="?android:actionBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:padding="@dimen/spacing_normal">
+
+                <com.ashwashing.pro.customview.CouponRelativeLayout
+                    android:id="@+id/couponRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/subscribeAccent"
+                    app:circleFillColor="?android:colorBackground"
+                    app:circleGap="@dimen/spacing_unit"
+                    app:circleRadius="@dimen/spacing_unit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="@dimen/fab_normal"
+                        android:layout_height="@dimen/fab_normal"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/spacing_normal"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_alipay_logo"
+                        android:tint="@color/subscribePrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_coupon_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iv_icon"
+                        android:layout_toEndOf="@+id/iv_icon"
+                        android:text="@string/alipay_coupon"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/subscribePrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/tv_coupon_caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_coupon_title"
+                        android:layout_alignBottom="@+id/iv_icon"
+                        android:layout_toEndOf="@+id/iv_icon"
+                        android:gravity="center_vertical"
+                        android:text="@string/alipay_coupon_caption" />
+
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Normal.Flat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/spacing_unit"
+                        android:onClick="launchAlipayForCoupon"
+                        android:text="@string/accept" />
+
+                </com.ashwashing.pro.customview.CouponRelativeLayout>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintTop_toBottomOf="@+id/couponRelativeLayout" />
+
+                <TextView
+                    android:id="@+id/tv_title_packages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:text="@string/plans"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                <TextView
+                    android:id="@+id/tv_title_subscribe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:text="@string/pay"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title_packages"
+                    app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_packages">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <ProgressBar
+                    android:id="@+id/pb_load"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    app:layout_constraintBottom_toBottomOf="@+id/rv_package"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_packages" />
+
+                <Button
+                    android:id="@+id/btn_retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:onClick="retryQuerySbpPlans"
+                    android:text="@string/retry"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/rv_package"
+                    app:layout_constraintEnd_toEndOf="@+id/pb_load"
+                    app:layout_constraintStart_toStartOf="@+id/pb_load"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_packages" />
+
+                <TextView
+                    android:id="@+id/tv_pay_hint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:text="@string/unavailable"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_subscribe" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_create_order" />
+
+                <Button
+                    android:id="@+id/btn_create_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_unit"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:onClick="showOrderDialog"
+                    android:text="@string/create_order"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_pay_hint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_pay_hint"
+                    app:layout_constraintTop_toTopOf="@+id/tv_pay_hint" />
+
+                <TextView
+                    android:id="@+id/tv_title_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:text="@string/notification"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_package" />
+
+                <TextView
+                    android:id="@+id/tv_notification_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_unit"
+                    android:layout_marginBottom="@dimen/spacing_unit"
+                    android:autoLink="email|web"
+                    android:text="@string/subscribe_notification"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title_notification"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_notification" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</com.ashwashing.pro.customview.ElasticDragDismissFrameLayout>

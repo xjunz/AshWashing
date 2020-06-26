@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tn_fab">tn_fab</string>
+    <string name="tn_toolbar">tn_toolbar</string>
+    <string name="tn_button">tn_button</string>
+    <string name="tn_image_view">tn_image_view</string>
+</resources>

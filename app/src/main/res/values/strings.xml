@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">小智洗澡</string>
+    <string name="title_home">主页</string>
+    <string name="title_mine">我的</string>
+    <string name="open_bluetooth">打开蓝牙</string>
+    <string name="bond">绑定</string>
+    <string-array name="shower_info_titles">
+        <item>日期</item>
+        <item>设备</item>
+        <item>用户</item>
+        <item>状态</item>
+        <item>时长</item>
+        <item>费用</item>
+    </string-array>
+    <string-array name="menu_captions">
+        <item>历史</item>
+        <item>设置</item>
+        <item>反馈</item>
+        <item>帮助</item>
+        <item>关于</item>
+    </string-array>
+    <string name="account_name">账户名</string>
+    <string name="phone_number">手机号</string>
+    <string name="academy">院校</string>
+    <string name="subscription_info">订阅信息</string>
+    <string name="register_time">注册时间</string>
+    <string name="shower_completed">洗澡结束</string>
+    <string name="shower_time">正在用水</string>
+    <string name="shower_pending">准备洗澡</string>
+    <string name="shower_interrupted">连接中断</string>
+    <string name="not_logged_in">尚未登录</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="log_in">登录</string>
+    <string name="nothing_here">空空如也…</string>
+    <string name="searching">正在搜索…</string>
+    <string name="clear_all">清空</string>
+    <string name="statistics">统计</string>
+    <string name="bonding">正在绑定…</string>
+    <string name="history">历史</string>
+    <string name="user_info">用户信息</string>
+    <string name="log_in_to">登录到小智洗澡</string>
+    <string name="avatar">头像</string>
+    <string name="subscribe">订阅</string>
+    <string name="shower">洗澡</string>
+    <string name="subscribe_service">付费订阅服务</string>
+    <string name="alipay_coupon">支付宝优惠券</string>
+    <string name="alipay_coupon_caption">通过支付宝付款享受折扣</string>
+    <string name="accept">领取</string>
+    <string name="plans">订阅计划</string>
+    <string name="notification">说明</string>
+    <string name="subscribe_notification">本应用采用订阅制，付款成功后，您可能需要等待一定时间才能订阅成功。如过长时间未订阅成功（如五分钟），请发送您的订单号至邮箱
+        <b>ashwashing@163.com</b> 。<b>订阅成功后，您便可在订阅有效时间内使用本服务</b>。开发不易，维护亦难，敬请理解！感谢您的支持！
+    </string>
+    <string name="intro">引导</string>
+    <string name="welcome">欢迎</string>
+    <string name="declaration">声明</string>
+    <string name="grant_permission">授权</string>
+    <string name="desc_welcome"> 欢迎使用小智洗澡，开始使用之前，您需要完成设置向导，请点击下一步</string>
+    <string name="desc_permission">此应用工作依赖蓝牙功能，根据安卓系统的限制，从安卓6.0开始，为了扫描蓝牙设备，我们需要您授予<b>获取粗略位置信息</b>的权限。
+        从安卓10开始，我们需要<b>获取精确位置信息</b>权限(因为蓝牙扫描可用于收集用户的位置信息，但请放心我们不会这么做），点击下一步开始授权</string>
+    <string name="msg_unsupported_device">
+        很抱歉，您的设备不支持运行此应用
+    </string>
+    <string name="exit">退出</string>
+    <string name="learn_more">了解更多</string>
+    <string name="retry">重试</string>
+    <string name="permission_granted">授权成功</string>
+    <string name="permission_denied">授权失败</string>
+    <string name="request_permission">申请权限</string>
+    <string name="goto_setting">打开设置</string>
+    <string name="exit_confirmation">确认退出</string>
+    <string name="msg_exit_shower_confirmation">你确定要退出吗？退出后，仍可在<b>历史纪录</b>中查看本次洗澡的数据哦</string>
+    <string name="register">注册</string>
+    <string name="rationale">说明</string>
+    <string name="register_rationale">注册小智洗澡账户需要先绑定<b>趣智校园/汇优</b>账户。</string>
+    <string name="alert">提示</string>
+    <string name="msg_network_unavailable">网络连接不可用,请检查您的网络！</string>
+    <string name="msg_register_fail_and_check_network">登录失败，请检查你的网络！</string>
+    <string name="go_back">返回</string>
+    <string name="no_more_items">没有更多啦！</string>
+    <string name="awaken_device">唤醒设备</string>
+    <string name="bond_fail">绑定失败</string>
+    <string name="shower_ended_and_close">当前洗澡已结束，请关闭设备</string>
+    <string name="close">关闭</string>
+    <string name="device_in_using_and_close">该设备正在使用中，是否结束？</string>
+    <string name="device_busy_and_change">设备正忙，请更换其他设备</string>
+    <string name="preconnect">准备连接</string>
+    <string name="start_shower">开始洗澡</string>
+    <string name="stop_shower">停止用水</string>
+    <string name="reconnect">重新连接</string>
+    <string name="device_error_and_retry">设备出错，再试试吧！</string>
+    <string name="qz">趣智校园</string>
+    <string name="hy">汇优</string>
+    <string name="select_platform">选择要绑定的平台</string>
+    <string name="indicator_format">%d/%d</string>
+    <string name="caption_verify_code">点击 <b>获取验证码</b>，我们会发送一条带验证码的短信至您的手机，请注意查收</string>
+    <string name="input_captcha">输入图形验证码</string>
+    <string name="obtain_verify_code">获取验证码</string>
+    <string name="try_later_after">%d秒后重试</string>
+    <string name="unknown_error">未知错误</string>
+    <string name="register_succeeded">注册成功</string>
+    <string name="network_or_server_error">网络错误或服务器错误</string>
+    <string name="vrf_code">验证码</string>
+    <string name="malformat">%s格式错误</string>
+    <string name="mallength">%s长度有误</string>
+    <string name="pls_enter">请输入%s</string>
+    <string name="pwd_not_correspond">两次密码不一致</string>
+    <string name="input_pwd">输入密码</string>
+    <string name="reinput_pwd">再次输入密码</string>
+    <string name="caption_register">注册成功后，您便可以通过用户名和密码登录。<b>请妥善保管您的账号和密码</b>。
+        如果忘记账号或密码，可发送您的趣智/汇优账号到ashwashing@163.com申请找回。</string>
+    <string name="pwd_length_helper">长度6到16位</string>
+    <string name="input_username">输入用户名</string>
+    <string name="create_account">创建您的账户</string>
+    <string name="username_helper">限定数字和字母，不能以数字开头，4到10位</string>
+    <string name="pls_enter_correct_phone">请输入正确的手机号</string>
+    <string name="verify_succeeded">验证成功</string>
+    <string name="verify_failed_and">验证失败：%s</string>
+    <string name="open_bluetooth_failed">打开蓝牙失败</string>
+    <string name="login_succeeded">登录成功</string>
+    <string name="login_failed">登录失败：%s</string>
+    <string name="query_acc_info_error">获取信息失败：%s</string>
+    <string name="check_clear_text">查看明文</string>
+    <string name="operation_failed">操作失败</string>
+    <string name="unsubscribed">尚未订阅</string>
+    <string name="caption_collect_device_info">该设备为第一次被使用，我们需要收集该设备的数据才能正常使用哦。一旦收集成功，以后便不用再次收集。请按以下步骤操作。</string>
+    <string name="caption_collect_device_info_steps">
+        1. 首先使用<u>趣智校园/汇优</u><b>开始用水</b>。\n\n2. 唤醒成功后，点击本页面下方的“<b>收集设备数据</b>”按钮。\n\n3. 当本应用提示数据收集成功，用<u>趣智校园/汇优</u>,<b>关闭用水</b>，然后就可以使用本应用洗澡啦！ </string>
+    <string name="collect_device_info">收集设备数据</string>
+    <string name="step">步骤</string>
+    <string name="verifying">正在验证…</string>
+    <string name="posting">正在提交…</string>
+    <string name="collecting">正在收集…</string>
+    <string name="collect_success">采集成功！别忘了先用趣智校园/汇优结束用水哦！</string>
+    <string name="blu_connection_issue_occurred">蓝牙连接出现错误</string>
+    <string name="msg_exit_collect">确定要退出收集设备信息吗？</string>
+    <string name="continue_shower_or_end">当前设备正在工作，是否继续用水？</string>
+    <string name="continue_use">继续使用</string>
+    <string name="use_ex_client">请使用<b>趣智校园/汇优</b>结束本设备</string>
+    <string name="pls_login_first">请登录后重试</string>
+    <string name="end">结束</string>
+    <string name="error">错误</string>
+    <string name="client_check_error">无法验证设备状态</string>
+    <string name="start_spray_error">无法启动设备</string>
+    <string name="end_spray_error">无法结束设备</string>
+    <string name="login_invalid_and_re_login">当前登录失效或已在异地登录，请重新登录</string>
+    <string name="loading">正在加载…</string>
+    <string name="shower_duration_format"><b>起始时间</b>：%s\n<b>结束时间</b>：%s\n<b>用时</b>：%s</string>
+    <string name="yuan">%.2f元</string>
+    <string name="statistics_format">从%s 至今，你共洗了<b>%d</b> 次澡，花费<b>%.2f </b>元。</string>
+    <string name="no_sbp">未订阅服务</string>
+    <string name="subscribe_to">订阅至%s</string>
+    <string name="min_sec">%s分%s秒</string>
+    <string name="shower_undone">未结束</string>
+    <string name="day_format">%d天</string>
+    <string name="cny_format">￥%.2f</string>
+    <string name="query_plan_failed">加载订阅计划失败</string>
+    <string name="unavailable">暂不可用</string>
+    <string name="plan_hint_format">已选择<b>%d号</b>订阅计划</string>
+    <string name="pay">付款</string>
+    <string name="launch_alipay_failed">操作失败,你安装支付宝了吗？</string>
+    <string name="waiting_for_paying">等待付款…</string>
+    <string name="paid">我已付款</string>
+    <string name="give_up_payment">放弃付款</string>
+    <string name="order_info">订单信息</string>
+    <string name="order_info_format"><b>订单号</b>：%s\n<b>原价</b>：%.2f元\n<b>随机减免</b>：%.2f元\n<b>实际支付</b>：%.2f元</string>
+    <string name="order_alert">订单<b>五分钟内</b>有效，超过有效时间的付款将不会被处理，请及时付款。</string>
+    <string name="goto_alipay">前往支付宝付款</string>
+    <string name="create_order">创建订单</string>
+    <string name="get_order_failed">获取订单信息失败</string>
+    <string name="unpaid_rationale">未检测到您已付款。如果您已付款，请稍后再试。</string>
+    <string name="subscribe_success">成功订阅至%s !</string>
+    <string name="error_format">%d:%s</string>
+    <string name="illegal_access">登录失效,请重新登录</string>
+    <string name="under_construction">该功能正在开发中…</string>
+    <string name="verify_hy">验证汇优账号</string>
+    <string name="enter_phone_number">输入手机号</string>
+    <string name="enter_vrf_code">输入短信验证码</string>
+    <string name="enter_pwd">输入密码</string>
+    <string name="verify_qz">验证趣智校园账号</string>
+    <string name="not_subscribed">您尚未订阅本服务</string>
+    <string name="about">关于</string>
+    <string name="vrf_code_sent">短信已发送，请注意查收</string>
+    <string name="latest_order">未完成的订单</string>
+    <string name="no_latest_order">暂时没有未完成的订单</string>
+    <string name="expired">订单已过期</string>
+    <string name="improper_collect_operation">收集失败，请使用<b>趣智校园/汇优</b>开启用水后再收集。（%d）</string>
+    <string name="connect">连接</string>
+    <string name="awaken_device_failed">查询设备失败,请重试</string>
+    <string name="comm_error">通信错误</string>
+    <string name="collect_datum_error">无法采集设备信息</string>
+    <string name="awaken_device_error">无法唤醒设备</string>
+    <string name="refresh">刷新</string>
+    <string name="mailto_uri">mailto:ashwashing@163.com?subject=来自%s的问题反馈&amp;body=%s</string>
+    <string name="mail_body">时间: %s\n用户ID: %d\n设备信息:\n%s\n版本信息:\n%s\n我要反馈的是: </string>
+    <string name="copy_order_id">复制订单号</string>
+    <string name="copy_completed">复制完成</string>
+    <string name="version_3_change_alert">感谢您更新小智洗澡，为了适配安卓Q系统对于蓝牙权限的变更，我们需要您重新进入向导页面进行权限授予，感谢您的配合！</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_card"
+        android:elevation="@dimen/z_dialog"
+        android:paddingStart="@dimen/spacing_unit"
+        android:paddingTop="@dimen/fab_normal_radius"
+        android:paddingEnd="@dimen/spacing_unit"
+        android:paddingBottom="@dimen/spacing_unit"
+        android:transitionGroup="true"
+        android:transitionName="@string/tn_button">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_user_info"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_user_info" />
+
+
+        <TextView
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_user_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            android:layout_marginBottom="@dimen/spacing_unit"
+            android:background="@drawable/bg_chip"
+            android:backgroundTint="?colorAccent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="logOut"
+            android:paddingStart="@dimen/spacing_large"
+            android:paddingTop="12dp"
+            android:paddingEnd="@dimen/spacing_large"
+            android:paddingBottom="12dp"
+            android:stateListAnimator="@animator/flat_raise_button"
+            android:text="退出登录"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/rl_panel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fab_normal_radius_minus"
+        android:background="@drawable/bg_circle"
+        android:contentDescription="@string/avatar"
+        android:elevation="@dimen/z_dialog"
+        android:src="@drawable/ic_account_circle_64dp"
+        android:tint="@android:color/white"
+        android:transitionName="@string/tn_image_view" />
+
+
+</RelativeLayout>

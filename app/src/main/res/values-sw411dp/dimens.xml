@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="dp_1">1.0000dp</dimen>
+	<dimen name="dp_2">2.0000dp</dimen>
+	<dimen name="dp_4">4.0000dp</dimen>
+	<dimen name="dp_12">12.0000dp</dimen>
+	<dimen name="spacing_unit">8.0000dp</dimen>
+	<dimen name="spacing_normal">16.0000dp</dimen>
+	<dimen name="spacing_large">32.0000dp</dimen>
+	<dimen name="dp_64">64.0000dp</dimen>
+	<dimen name="dp_24">24.0000dp</dimen>
+	<dimen name="dp_48">48.0000dp</dimen>
+	<dimen name="fab_small">40.0000dp</dimen>
+	<dimen name="fab_normal">56.0000dp</dimen>
+	<dimen name="avatar_width">48.0000dp</dimen>
+	<dimen name="fab_normal_radius">28.0000dp</dimen>
+	<dimen name="fab_normal_radius_minus">-28.0000dp</dimen>
+	<dimen name="z_toolbar">6.0000dp</dimen>
+	<dimen name="z_card">2.0000dp</dimen>
+	<dimen name="z_dialog">10.0000dp</dimen>
+	<dimen name="z_fab">4.0000dp</dimen>
+	<dimen name="corner_card">2.0000dp</dimen>
+	<dimen name="corner_dialog">4.0000dp</dimen>
+	<dimen name="corner_button">2.0000dp</dimen>
+	<dimen name="drag_dismiss_distance">211.0000dp</dimen>
+	<dimen name="shower_banner_height">180.0000dp</dimen>
+	<dimen name="shower_card_margin_top">164.0000dp</dimen>
+	<dimen name="ripple_spacing">20.0000dp</dimen>
+	<dimen name="username_max_width">200.0000dp</dimen>
+	<dimen name="z_bottom_bar">6.0000dp</dimen>
+	<dimen name="captcha_width">100.0000dp</dimen>
+	<dimen name="captcha_height">40.0000dp</dimen>
+	<dimen name="collect_device_info_banner_height">140.0000dp</dimen>
+	<dimen name="payment_banner_height">140.0000dp</dimen>
+	<dimen name="no_history_place_holder_width">144.0000dp</dimen>
+	<dimen name="dp_6">6.0000dp</dimen>
+</resources>

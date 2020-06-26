@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/fast_out_slow_in"
+    android:duration="@integer/shortHalf">
+    <transition class="com.ashwashing.pro.ui.transition.Sade">
+        <targets>
+            <target android:excludeId="@android:id/statusBarBackground" />
+            <target android:excludeId="@android:id/navigationBarBackground" />
+            <target android:excludeId="@android:id/background" />
+        </targets>
+    </transition>
+    <fade>
+        <targets>
+            <target android:targetId="@android:id/statusBarBackground" />
+            <target android:targetId="@android:id/navigationBarBackground" />
+            <target android:targetId="@android:id/background" />
+        </targets>
+    </fade>
+</transitionSet>

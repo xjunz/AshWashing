@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="@dimen/spacing_normal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_platform"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_qz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/qz"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <RadioButton
+            android:id="@+id/rb_hy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_unit"
+            android:checked="false"
+            android:text="@string/hy"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+    </RadioGroup>
+    <requestFocus />
+</LinearLayout>

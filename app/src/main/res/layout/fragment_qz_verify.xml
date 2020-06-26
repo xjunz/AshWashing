@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_normal">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_qz"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_phone_number"
+            android:inputType="numberDecimal"
+            android:maxLength="11" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="?colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_pwd"
+            android:inputType="textPassword"
+            android:maxLength="16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>

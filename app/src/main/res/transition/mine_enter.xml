@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <explode android:interpolator="@android:interpolator/fast_out_slow_in">
+        <targets>
+            <target android:excludeId="@id/tv_sbp_info" />
+            <target android:excludeId="@id/tv_title" />
+            <target android:excludeId="@id/tv_profile" />
+        </targets>
+    </explode>
+    <fade>
+        <targets>
+            <target android:targetId="@id/tv_sbp_info" />
+            <target android:targetId="@id/tv_title" />
+            <target android:targetId="@id/tv_profile" />
+        </targets>
+    </fade>
+</transitionSet>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:duration="@integer/shortMargin">
+    <transition
+        class="com.ashwashing.pro.ui.transition.RectangularSurfaceTransform"
+        android:interpolator="@android:interpolator/fast_out_slow_in"
+        app:startColor="?colorButtonNormal">
+        <targets>
+            <target android:targetId="@+id/login_panel" />
+        </targets>
+    </transition>
+    <changeBounds>
+        <targets>
+            <target android:targetId="@+id/iv_avatar" />
+        </targets>
+        <arcMotion />
+    </changeBounds>
+</transitionSet>

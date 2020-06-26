@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_normal">
+
+    <ImageView
+        android:id="@+id/iv_captcha"
+        android:layout_width="@dimen/captcha_width"
+        android:layout_height="@dimen/captcha_height"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/et_captcha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_unit"
+        android:layout_alignTop="@+id/iv_captcha"
+        android:layout_alignBottom="@+id/iv_captcha"
+        android:layout_toStartOf="@+id/iv_captcha"
+        android:background="@null"
+        android:ems="10"
+        android:maxLength="4"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAllCaps="true"
+        android:letterSpacing=".2"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/pb_captcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/iv_captcha"
+        android:layout_alignTop="@+id/iv_captcha"
+        android:layout_alignEnd="@+id/iv_captcha"
+        android:layout_alignBottom="@+id/iv_captcha"
+        android:maxWidth="@dimen/captcha_height"
+        android:maxHeight="@dimen/captcha_height" />
+
+</RelativeLayout>

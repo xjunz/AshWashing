@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?android:actionBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:transitionGroup="false"
+        android:transitionName="@string/tn_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_home" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_device"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:colorBackground"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_container"
+        tools:listitem="@layout/item_device" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:letterSpacing=".08"
+        android:text="@string/nothing_here"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="?android:textColorSecondaryNoDisable"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rv_device"
+        app:layout_constraintTop_toBottomOf="@+id/cl_container" />
+
+    <FrameLayout
+        android:id="@+id/cl_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:colorBackground"
+        android:elevation="@dimen/z_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:ignore="UselessParent">
+
+            <ImageButton
+                android:id="@+id/ib_bluetooth"
+                android:layout_width="@dimen/fab_normal"
+                android:layout_height="@dimen/fab_normal"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle"
+                android:contentDescription="@string/open_bluetooth"
+                android:onClick="invokeBluetooth"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_bluetooth_audio_24dp" />
+
+            <com.ashwashing.pro.customview.RippleView
+                android:id="@+id/ripple_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:rippleAutoRunning="false"
+                app:rippleCount="5"
+                app:rippleSpacing="@dimen/ripple_spacing"
+                app:rippleTarget="@+id/ib_bluetooth" />
+        </FrameLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

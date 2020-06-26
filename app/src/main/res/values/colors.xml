@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#17A4EC</color>
+    <color name="colorPrimaryDark">#0F74AA</color>
+    <color name="colorCardBackground">@android:color/white</color>
+    <color name="colorAccent">#FF4981</color>
+    <color name="colorAccentDark">#D81B60</color>
+    <color name="colorAccentBlind">#F8BBD0</color>
+    <color name="mask">#33000000</color>
+    <color name="grey">#BEBEBE</color>
+    <color name="golden">#CFBF74</color>
+    <color name="brown">#5A451A</color>
+    <color name="brown_dark">#37290F</color>
+    <color name="subscribePrimary">@color/brown</color>
+    <color name="subscribeAccent">@color/golden</color>
+    <color name="subscribePrimaryDark">@color/brown_dark</color>
+    <color name="unsubscribed_tint">#C6C6C6</color>
+</resources>
